@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Домина — деревянные дома и бани в Архангельске</title>
+<meta name="description" content="Дома, бани и бытовки из лафета, бруса и бревна. Своё производство в Новодвинске, выставочные макеты у ТЦ «На Окружной». Телефон +7 (8182) 48-88-55.">
+<meta property="og:title" content="Домина — деревянное домостроение от А до Я">
+<meta property="og:description" content="Дома и бани из лафета камерной сушки, бруса и бревна. Архангельск и область.">
+<meta property="og:image" content="img/novodvinsk-laf-1.webp">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,500;0,700;0,800;1,500&family=Onest:wght@400;500;600&display=swap&subset=cyrillic" rel="stylesheet">
+<style>
+:root{
+  --sky:#E4EAEC; --frost:#F5F7F7; --spruce:#15291F; --spruce-2:#1F3A2D; --ink:#1E2622;
+  --pine:#D49A4A; --pine-soft:#E9C48F; --bark:#5F5141; --line:#C3CCCB;
+  --wrap:1240px; --pad:24px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--sky);color:var(--ink);font:400 17px/1.6 Onest,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:Bitter,Georgia,serif;font-weight:800;letter-spacing:-.015em;line-height:1.02;margin:0;color:var(--spruce)}
+h2{font-size:clamp(34px,4.6vw,56px)}
+h3{font-size:24px;font-weight:700;line-height:1.15}
+p{margin:0 0 1em;max-width:66ch}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
+.slot{background:#FFE58A;color:#3B2F00;padding:0 .3em;border-radius:3px;font-weight:500;white-space:normal}
+.lead{font-size:19px;color:var(--bark);max-width:58ch}
+section{padding:104px 0}
+:focus-visible{outline:3px solid var(--pine);outline-offset:3px}
+
+/* кнопки */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:3px;font:600 16px/1 Onest,sans-serif;text-decoration:none;cursor:pointer;border:1.5px solid transparent;transition:background .2s,color .2s,border-color .2s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-main{background:var(--spruce);color:#fff}
+.btn-main:hover{background:var(--spruce-2)}
+.btn-pine{background:var(--pine);color:var(--spruce)}
+.btn-pine:hover{background:var(--pine-soft)}
+.btn-line{border-color:currentColor;color:var(--spruce)}
+.btn-line:hover{background:rgba(21,41,31,.07)}
+.on-dark .btn-line{color:#fff}
+.on-dark .btn-line:hover{background:rgba(255,255,255,.08)}
+
+/* шапка */
+.top{position:sticky;top:0;z-index:20;background:rgba(228,234,236,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:28px;height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 26px/1 Bitter,serif;color:var(--spruce);letter-spacing:-.02em}
+.logo img{height:50px;width:auto}
+.foot-logo{height:56px;width:auto}
+.nav{display:flex;gap:24px;margin-left:auto}
+.nav a{text-decoration:none;font-weight:500;font-size:15px;color:var(--bark)}
+.nav a:hover{color:var(--spruce)}
+.top-phone{font:700 19px/1 Bitter,serif;text-decoration:none;color:var(--spruce);white-space:nowrap}
+.top .btn{min-height:44px;padding:0 18px;font-size:15px}
+
+/* первый экран */
+.hero{position:relative;padding:0;background:var(--spruce)}
+.hero-photo{position:relative;height:min(88vh,860px);min-height:520px;overflow:hidden;background:#9fb0b6}
+.strip{position:absolute;left:0;right:0;overflow:hidden;height:calc(100%/7 + 1px)}
+.strip img{position:absolute;left:0;width:100%;height:700%;object-fit:cover;object-position:50% 58%}
+.js .strip{transition:transform 1.05s cubic-bezier(.2,.75,.15,1)}
+.js .hero:not(.go) .strip:nth-child(odd){transform:translateX(-103%)}
+.js .hero:not(.go) .strip:nth-child(even){transform:translateX(103%)}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,26,19,.55) 0%,rgba(13,26,19,0) 55%);pointer-events:none}
+.hero-card{position:absolute;left:max(var(--pad),calc((100vw - var(--wrap))/2 + var(--pad)));bottom:56px;z-index:3;width:min(640px,calc(100% - 48px));background:var(--spruce);color:#E8EEEA;padding:40px 44px 44px;border-radius:3px}
+.js .hero-card{transition:opacity .7s .9s,transform .7s .9s}
+.js .hero:not(.go) .hero-card{opacity:0;transform:translateY(24px)}
+.hero-place{font-size:15px;color:var(--pine-soft);margin-bottom:18px}
+.hero h1{color:#fff;font-size:clamp(44px,6.2vw,84px);line-height:.98}
+.hero-card p{margin:20px 0 28px;color:#C9D4CD;font-size:18px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px}
+.hero-cap{position:absolute;right:var(--pad);bottom:18px;z-index:3;color:#fff;font-size:13px;opacity:.85;text-shadow:0 1px 3px rgba(0,0,0,.6);max-width:340px;text-align:right}
+
+/* материалы — торцы */
+.mat-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:56px}
+.torcy{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border-top:1px solid var(--line)}
+.torec{padding:32px 22px 8px;border-right:1px solid var(--line);display:flex;flex-direction:column}
+.torec:last-child{border-right:0}
+.torec .pic{height:230px;display:flex;align-items:flex-end;justify-content:flex-start;margin-bottom:22px}
+.torec svg{overflow:visible}
+.torec h3{font-size:21px;margin-bottom:6px}
+.torec .size{font:italic 500 17px/1.3 Bitter,serif;color:var(--bark);margin-bottom:10px}
+.torec p{font-size:15px;line-height:1.55;color:#3B4540}
+.ring{fill:none;stroke:#B07A35;stroke-width:1.1;opacity:.75}
+.js .torcy .ring{stroke-dasharray:var(--len);stroke-dashoffset:var(--len);transition:stroke-dashoffset 1.6s ease-out}
+.js .torcy.in .ring{stroke-dashoffset:0}
+.dim{stroke:var(--bark);stroke-width:1;fill:none}
+.dimt{font:italic 500 13px Bitter,serif;fill:var(--bark)}
+.mat-photo{margin-top:56px;display:grid;grid-template-columns:7fr 5fr;gap:32px;align-items:center}
+.mat-photo img{border-radius:3px;width:100%;aspect-ratio:16/9;object-fit:cover}
+.mat-photo p{font-size:16px;color:var(--bark)}
+
+/* что строим */
+.build{background:var(--frost)}
+.rows{margin-top:48px;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:1.1fr 1.6fr .9fr;gap:32px;padding:26px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.row h3{font-size:24px}
+.row p{margin:0;color:#3B4540;font-size:16px}
+.row .price{font:700 18px/1.3 Bitter,serif;color:var(--spruce);text-align:right}
+
+/* журнал стройки */
+.log-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:24px}
+.entry{display:grid;grid-template-columns:200px 1fr;gap:40px;padding:48px 0;border-top:1px solid var(--line)}
+.entry time{font:800 22px/1.1 Bitter,serif;color:var(--spruce);display:block;position:sticky;top:96px}
+.entry time span{display:block;font:500 15px/1.4 Onest,sans-serif;color:var(--bark);margin-top:6px}
+.entry h3{margin-bottom:10px}
+.entry p{color:#3B4540;font-size:16px}
+.shots{display:grid;gap:10px;margin-top:20px}
+.shots img{width:100%;height:100%;object-fit:cover;border-radius:3px;background:#cfd8da}
+.shots.s-big{grid-template-columns:2fr 1fr;grid-template-rows:220px 220px}
+.shots.s-big img:first-child{grid-row:1/3}
+.shots.s-two{grid-template-columns:1fr 1fr;grid-auto-rows:300px}
+.shots.s-tall{grid-template-columns:repeat(3,1fr);grid-auto-rows:380px}
+.shots.s-mix{grid-template-columns:repeat(4,1fr);grid-auto-rows:200px}
+.shots.s-mix .tall{grid-row:span 2}
+.archive{margin-top:64px}
+.archive h3{margin-bottom:6px}
+.arch-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px}
+.arch-grid figure{margin:0}
+.arch-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px}
+.arch-grid figcaption{font-size:13px;color:var(--bark);margin-top:6px}
+
+/* макеты */
+.maket{background:var(--spruce);color:#DCE5DF}
+.maket h2{color:#fff}
+.maket-grid{display:grid;grid-template-columns:5fr 6fr;gap:56px;align-items:center}
+.maket .lead{color:#B9C7BE}
+.addr{font:700 26px/1.2 Bitter,serif;color:var(--pine);margin:26px 0 8px}
+.maket-pics{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.maket-pics img{width:100%;border-radius:3px;object-fit:cover}
+.maket-pics img:first-child{grid-column:1/3;aspect-ratio:16/10}
+.maket-pics img:not(:first-child){aspect-ratio:3/4}
+.maket .btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+
+/* шаги */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);margin-top:56px;counter-reset:s}
+.step{padding:0 22px 0 0;position:relative}
+.step::before{counter-increment:s;content:counter(s);display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--sky);border:2px solid var(--spruce);font:800 18px Bitter,serif;color:var(--spruce);position:relative;z-index:1;margin-bottom:22px}
+.step::after{content:"";position:absolute;top:21px;left:44px;right:0;height:2px;background:repeating-linear-gradient(90deg,var(--spruce) 0 14px,transparent 14px 20px)}
+.step:last-child::after{display:none}
+.step h3{font-size:20px;margin-bottom:8px}
+.step p{font-size:15px;color:#3B4540}
+.step img,.step .plan{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px;margin-bottom:14px}
+.terms{margin-top:44px;padding:22px 26px;background:var(--frost);border-left:4px solid var(--pine);font-size:16px}
+
+/* проекты и производство */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}
+.chips a{display:inline-flex;align-items:center;min-height:42px;padding:0 16px;border:1.5px solid var(--spruce);border-radius:3px;text-decoration:none;font:700 16px Bitter,serif;color:var(--spruce)}
+.chips a:hover{background:var(--spruce);color:#fff}
+.goods{margin-top:20px;border-top:1px solid var(--line)}
+.good{display:flex;justify-content:space-between;gap:20px;padding:15px 0;border-bottom:1px solid var(--line);font-size:16px}
+.good b{font:700 17px Bitter,serif;color:var(--spruce);white-space:nowrap;text-align:right}
+.good small{display:block;color:var(--bark);font-size:13px}
+.offer{margin-top:28px;padding:26px;background:var(--spruce);color:#DCE5DF;border-radius:3px}
+.offer h3{color:#fff;margin-bottom:8px}
+.offer .sum{font:800 34px/1 Bitter,serif;color:var(--pine);margin:12px 0 8px}
+.offer p{font-size:15px;color:#B9C7BE;margin:0}
+
+/* о компании */
+.about{background:var(--frost)}
+.about-grid{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:start}
+.about-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px}
+.facts{margin:26px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.facts li{padding:14px 0;border-bottom:1px solid var(--line);font-size:16px}
+.reviews{margin-top:40px;padding:28px;border:1.5px dashed var(--line);border-radius:3px}
+
+/* контакты */
+.contacts{background:var(--spruce);color:#DCE5DF;padding-bottom:64px}
+.contacts h2{color:#fff}
+.bigphone{display:block;font:800 clamp(56px,11vw,150px)/.95 Bitter,serif;color:#fff;text-decoration:none;letter-spacing:-.03em;margin:28px 0 6px}
+.bigphone small{display:block;font:500 20px/1.3 Onest,sans-serif;color:var(--pine-soft);letter-spacing:0;margin-bottom:6px}
+.c-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:56px;padding-top:36px;border-top:1px solid rgba(255,255,255,.14)}
+.c-grid h3{color:#fff;font-size:19px;margin-bottom:12px}
+.c-grid p,.c-grid a{font-size:16px;color:#C9D4CD}
+.c-grid a.tel{display:block;font:700 22px/1.3 Bitter,serif;color:#fff;text-decoration:none;margin-bottom:2px}
+.messengers{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
+.foot{background:#0F1E17;color:#8EA096;font-size:14px;padding:26px 0}
+.foot .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;align-items:center}
+.foot a{color:var(--pine-soft)}
+
+/* появление при прокрутке — только для журнала */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.js .rv.in{opacity:1;transform:none}
+
+@media (max-width:1080px){
+  .nav{display:none}
+  .hero-card{width:min(540px,calc(100% - 48px));padding:32px 34px 36px}
+  .hero h1{font-size:58px}
+  .strip img{object-position:75% 58%}
+  .torcy{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .torec:nth-child(3){border-right:0}
+  .torec:nth-child(n+4){border-top:1px solid var(--line)}
+  .steps{grid-template-columns:1fr 1fr 1fr;row-gap:40px}
+  .step:nth-child(3)::after{display:none}
+}
+@media (max-width:760px){
+  :root{--pad:16px}
+  body{font-size:16px}
+  section{padding:72px 0}
+  h2{font-size:36px}
+  .top .wrap{height:60px;gap:12px}
+  .logo img{height:42px}
+  .top-phone{display:none}
+  .top .btn{margin-left:auto;min-height:42px;padding:0 14px}
+  .hero-photo{height:58vh;min-height:360px}
+  .hero-photo::after{background:linear-gradient(0deg,rgba(13,26,19,.35),rgba(13,26,19,0) 40%)}
+  .hero-card{position:relative;left:0;bottom:0;width:100%;padding:30px 16px 36px;border-radius:0}
+  .hero h1{font-size:44px}
+  .hero-card p{font-size:16px}
+  .hero-btns .btn{flex:1 1 100%}
+  .hero-cap{left:16px;right:16px;bottom:10px;text-align:left;font-size:12px}
+  .mat-head,.log-head,.maket-grid,.split,.about-grid,.mat-photo{grid-template-columns:1fr;gap:24px}
+  .torcy{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .torec{padding:24px 12px 4px;min-width:0}
+  .torec h3{font-size:18px;hyphens:auto;overflow-wrap:anywhere}
+  .torec .size{font-size:15px}
+  .torec .pic svg{max-width:100%;height:auto}
+  .torec:nth-child(3){border-right:1px solid var(--line)}
+  .torec:nth-child(2n){border-right:0}
+  .torec:nth-child(n+3){border-top:1px solid var(--line)}
+  .torec .pic{height:180px}
+  .torec .pic svg{transform:scale(.8);transform-origin:left bottom}
+  .row{grid-template-columns:1fr;gap:6px}
+  .row .price{text-align:left}
+  .entry{grid-template-columns:1fr;gap:12px;padding:36px 0}
+  .entry time{position:static}
+  .shots.s-big{grid-template-columns:1fr 1fr;grid-template-rows:220px 130px}
+  .shots.s-big img:first-child{grid-row:auto;grid-column:1/3}
+  .shots.s-two{grid-auto-rows:150px}
+  .shots.s-tall{grid-template-columns:repeat(3,1fr);grid-auto-rows:190px}
+  .shots.s-mix{grid-template-columns:1fr 1fr;grid-auto-rows:140px}
+  .arch-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr;row-gap:28px}
+  .step{padding:0 0 0 64px}
+  .step::before{position:absolute;left:0;top:0}
+  .step::after{display:block!important;top:44px;bottom:-28px;left:21px;right:auto;width:2px;height:auto;background:repeating-linear-gradient(180deg,var(--spruce) 0 14px,transparent 14px 20px)}
+  .step:last-child::after{display:none!important}
+  .c-grid{grid-template-columns:1fr;gap:28px}
+  .messengers .btn{flex:1 1 100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .strip,.js .hero-card,.js .rv,.js .torcy .ring{transition:none!important;transform:none!important;opacity:1!important;stroke-dashoffset:0!important}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-vk" viewBox="0 0 24 24"><path fill="currentColor" d="M12.8 18c-6 0-9.5-4.1-9.6-11h3c.1 5 2.3 7.2 4.1 7.6V7h2.8v4.3c1.7-.2 3.6-2.2 4.2-4.3h2.8c-.5 2.7-2.4 4.7-3.8 5.5 1.4.7 3.6 2.4 4.4 5.5h-3.1c-.6-2.1-2.3-3.7-4.5-3.9V18z"/></symbol>
+    <symbol id="i-tg" viewBox="0 0 24 24"><path fill="currentColor" d="M21.4 4.2 2.9 11.3c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.8.8s.6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.9-1.4-1.9zM8 14.1l9.6-6c.5-.3.9-.1.5.2l-8.1 7.3-.3 3.4z"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3.5 20.5l1.3-4.6A8.6 8.6 0 1 1 8.2 19.2z"/><path fill="currentColor" d="M9.1 7.6c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 3 4.7 4.1 2.3.9 2.8.7 3.3.7.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3l-1.9-.9c-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1a7.1 7.1 0 0 1-3.5-3c-.3-.5.3-.4.7-1.4.1-.2 0-.3 0-.5z"/></symbol>
+    <symbol id="i-max" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="currentColor" d="M7.5 16V8h1.8l2.7 3.8L14.7 8h1.8v8h-1.9v-4.9l-2.6 3.5-2.6-3.5V16z"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Домина — в начало">
+      <img src="img/logo.png" alt="Домина, строительная компания" width="319" height="128">
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#materialy">Из чего строим</a>
+      <a href="#obekty">Объекты</a>
+      <a href="#makety">Макеты</a>
+      <a href="#kontakty">Контакты</a>
+    </nav>
+    <a class="top-phone" href="tel:+78182488855">48-88-55</a>
+    <a class="btn btn-main" href="tel:+78182488855"><svg><use href="#i-phone"/></svg>Позвонить</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-label="Домина">
+  <div class="hero-photo" id="heroPhoto">
+    <!-- 7 венцов: фото собирается полосами -->
+  </div>
+  <div class="hero-card on-dark">
+    <div class="hero-place">Архангельск, Новодвинск и область. Строили и в Санкт-Петербурге</div>
+    <h1>Деревянное домостроение от А до Я</h1>
+    <p>Дома, бани и бытовки из лафета, бруса и бревна. Домокомплект делаем на своём производстве в Новодвинске и собираем на вашем участке.</p>
+    <div class="hero-btns">
+      <a class="btn btn-pine" href="tel:+78182488855"><svg><use href="#i-phone"/></svg>+7 (8182) 48-88-55</a>
+      <a class="btn btn-line" href="https://vk.com/im?sel=-45403775" target="_blank" rel="noopener"><svg><use href="#i-vk"/></svg>Написать во ВКонтакте</a>
+    </div>
+  </div>
+  <div class="hero-cap">Дом из профилированного лафета камерной сушки, Новодвинск, апрель 2026</div>
+</section>
+
+<section id="materialy">
+  <div class="wrap">
+    <div class="mat-head">
+      <h2>Из чего строим</h2>
+      <p class="lead">Торцы нарисованы в одном масштабе — так видно, чем лафет отличается от бруса и бревна.</p>
+    </div>
+    <div class="torcy" id="torcy">
+      <!-- 1 мм = 0,6 px -->
+      <div class="torec">
+        <div class="pic">
+          <svg width="150" height="150" viewBox="-14 -6 150 150" aria-hidden="true">
+            <defs><clipPath id="c1"><path d="M0 8h24v-8h12v8h48v-8h12v8h24v120H96v-8H84v8H36v-8H24v8H0z"/></clipPath></defs>
+            <path d="M0 8h24v-8h12v8h48v-8h12v8h24v120H96v-8H84v8H36v-8H24v8H0z" fill="#E7C08A" stroke="#8D6430" stroke-width="1.2"/>
+            <g clip-path="url(#c1)"><circle class="ring" cx="56" cy="70" r="6" style="--len:40"/><circle class="ring" cx="57" cy="69" r="14" style="--len:90"/><circle class="ring" cx="58" cy="68" r="23" style="--len:150"/><circle class="ring" cx="59" cy="67" r="33" style="--len:210"/><circle class="ring" cx="60" cy="66" r="44" style="--len:280"/><circle class="ring" cx="61" cy="65" r="56" style="--len:360"/><circle class="ring" cx="62" cy="64" r="69" style="--len:440"/><path d="M56 70 L40 128" stroke="#8D6430" stroke-width="1.4" fill="none"/></g>
+            <path class="dim" d="M0 136v6M120 136v6M0 139h120"/><text class="dimt" x="60" y="152" text-anchor="middle">200 мм</text>
+          </svg>
+        </div>
+        <h3>Лафет камерной сушки</h3>
+        <div class="size">148×198, 195×195, 198×198, 200×200 мм</div>
+        <p>Профилированный, высушен в камере. Из него — дома, бани и выставочные макеты.</p>
+      </div>
+      <div class="torec">
+        <div class="pic">
+          <svg width="150" height="200" viewBox="-14 -6 150 200" aria-hidden="true">
+            <defs><clipPath id="c2"><rect width="120" height="180"/></clipPath></defs>
+            <rect width="120" height="180" fill="#EBC995" stroke="#8D6430" stroke-width="1.2"/>
+            <g clip-path="url(#c2)"><circle class="ring" cx="64" cy="94" r="8" style="--len:55"/><circle class="ring" cx="63" cy="93" r="19" style="--len:125"/><circle class="ring" cx="62" cy="92" r="31" style="--len:200"/><circle class="ring" cx="61" cy="91" r="44" style="--len:280"/><circle class="ring" cx="60" cy="90" r="58" style="--len:370"/><circle class="ring" cx="59" cy="89" r="73" style="--len:460"/><circle class="ring" cx="58" cy="88" r="89" style="--len:560"/><path d="M64 94 L120 70" stroke="#8D6430" stroke-width="1.4" fill="none"/></g>
+            <path class="dim" d="M0 186v6M120 186v6M0 189h120"/><text class="dimt" x="60" y="200" text-anchor="middle">200 мм</text>
+            <path class="dim" d="M126 0h6M126 180h6M129 0v180"/><text class="dimt" x="136" y="94" transform="rotate(90 136 94)" text-anchor="middle">300 мм</text>
+          </svg>
+        </div>
+        <h3>Брус естественной влажности</h3>
+        <div class="size">например, 200×300 мм</div>
+        <p>Строганый и нестроганый, соединение «тёплый угол». Такой дом строили в посёлке Пинега.</p>
+      </div>
+      <div class="torec">
+        <div class="pic">
+          <svg width="150" height="150" viewBox="-14 -6 150 150" aria-hidden="true">
+            <defs><clipPath id="c3"><path d="M0 10h16l6-10h8l6 10h48l6-10h8l6 10h16v110h-16l-6 8h-8l-6-8H36l-6 8h-8l-6-8H0z"/></clipPath></defs>
+            <path d="M0 10h16l6-10h8l6 10h48l6-10h8l6 10h16v110h-16l-6 8h-8l-6-8H36l-6 8h-8l-6-8H0z" fill="#E3BC84" stroke="#8D6430" stroke-width="1.2"/>
+            <g clip-path="url(#c3)"><circle class="ring" cx="62" cy="66" r="7" style="--len:45"/><circle class="ring" cx="61" cy="65" r="17" style="--len:110"/><circle class="ring" cx="60" cy="64" r="28" style="--len:180"/><circle class="ring" cx="59" cy="63" r="40" style="--len:255"/><circle class="ring" cx="58" cy="62" r="53" style="--len:340"/><circle class="ring" cx="57" cy="61" r="67" style="--len:425"/></g>
+          </svg>
+        </div>
+        <h3>Профилированный брус</h3>
+        <div class="size">сечение <span class="slot">{{…}}</span></div>
+        <p>Естественной влажности, угловое соединение — лабиринтный замок.</p>
+      </div>
+      <div class="torec">
+        <div class="pic">
+          <svg width="160" height="160" viewBox="-14 -10 160 160" aria-hidden="true">
+            <defs><clipPath id="c4"><path d="M66 0a66 66 0 1 1 -1 0zM44 128q22 -14 44 0z"/></clipPath></defs>
+            <path d="M66 0a66 66 0 0 1 22 128q-22 -14 -44 0A66 66 0 0 1 66 0z" fill="#DDB27A" stroke="#7A5427" stroke-width="1.6"/>
+            <g clip-path="url(#c4)"><circle class="ring" cx="64" cy="68" r="6" style="--len:40"/><circle class="ring" cx="64" cy="67" r="15" style="--len:95"/><circle class="ring" cx="65" cy="66" r="25" style="--len:160"/><circle class="ring" cx="65" cy="66" r="36" style="--len:230"/><circle class="ring" cx="66" cy="65" r="47" style="--len:300"/><circle class="ring" cx="66" cy="65" r="58" style="--len:370"/><path d="M64 68 L20 30" stroke="#7A5427" stroke-width="1.4" fill="none"/></g>
+          </svg>
+        </div>
+        <h3>Бревно ручной рубки</h3>
+        <div class="size">диаметр <span class="slot">{{…}}</span></div>
+        <p>Дома из бревна, срубленного вручную.</p>
+      </div>
+      <div class="torec">
+        <div class="pic">
+          <svg width="150" height="150" viewBox="-6 -6 150 150" aria-hidden="true">
+            <rect x="0" y="0" width="130" height="120" fill="#F1E6CF" stroke="#8D6430" stroke-width="1.2"/>
+            <g fill="#E7C08A" stroke="#8D6430" stroke-width="1"><rect x="0" y="0" width="12" height="120"/><rect x="59" y="0" width="12" height="120"/><rect x="118" y="0" width="12" height="120"/><rect x="0" y="0" width="130" height="10"/><rect x="0" y="110" width="130" height="10"/></g>
+            <g stroke="#C8B48F" stroke-width="1" fill="none"><path d="M14 20q8 6 0 12t0 12 0 12 0 12 0 12 0 12 0 12M24 18q10 8 0 16t0 16 0 16 0 16 0 16M36 18q10 8 0 16t0 16 0 16 0 16 0 16M48 18q10 8 0 16t0 16 0 16 0 16 0 16M80 18q10 8 0 16t0 16 0 16 0 16 0 16M92 18q10 8 0 16t0 16 0 16 0 16 0 16M104 18q10 8 0 16t0 16 0 16 0 16 0 16"/></g>
+          </svg>
+        </div>
+        <h3>Каркас</h3>
+        <div class="size">каркасно-панельные дома</div>
+        <p>Каркасно-панельная технология: стойки, утеплитель, обшивка.</p>
+      </div>
+    </div>
+
+    <div class="mat-photo">
+      <img src="img/process-zamki.webp" alt="Стены деревянного дома сверху: угловые соединения бруса" loading="lazy" width="1400" height="793">
+      <div>
+        <h3>Дом, который не нужно обшивать</h3>
+        <p style="margin-top:12px">Из постов «Домины»: дом из лафета камерной сушки «тёплый, без дополнительного утепления и обшивки», а стены бани собирают по технологии «паз-рейка».</p>
+        <p>Что именно входит в стеновой комплект и под ключ: <span class="slot">{{комплектации}}</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="build" id="chto">
+  <div class="wrap">
+    <h2>Что строим</h2>
+    <div class="rows">
+      <div class="row"><h3>Дома и коттеджи</h3><p>Для жизни круглый год и для сезона: брус, лафет, бревно, каркас.</p><div class="price">от <span class="slot">{{цена}}</span></div></div>
+      <div class="row"><h3>Бани</h3><p>Из лафета и бруса, например 6×4 м. Бани строили и в Санкт-Петербурге.</p><div class="price">от <span class="slot">{{цена}}</span></div></div>
+      <div class="row"><h3>Бытовки</h3><p>Проектируем и строим бытовки.</p><div class="price">от <span class="slot">{{цена}}</span></div></div>
+      <div class="row"><h3>Беседки и малые формы</h3><p>Беседки из строганого бруса и другие постройки для участка.</p><div class="price">от <span class="slot">{{цена}}</span></div></div>
+      <div class="row"><h3>Фундаменты</h3><p>Под дом и баню.</p><div class="price">от <span class="slot">{{цена}}</span></div></div>
+      <div class="row"><h3>Проектирование</h3><p>Проекты домов, бань, коттеджей и бытовок.</p><div class="price">от <span class="slot">{{цена}}</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="obekty">
+  <div class="wrap">
+    <div class="log-head">
+      <h2>Журнал стройки</h2>
+      <p class="lead">Что собирали в последнее время. Даты и подписи — из ленты «Домины» во ВКонтакте.</p>
+    </div>
+
+    <article class="entry rv">
+      <time datetime="2026-08-30">30 августа 2026<span>Петергоф, Ленинградская обл.</span></time>
+      <div>
+        <h3>Административное здание с банным комплексом</h3>
+        <p>Туристический комплекс из профилированного лафета камерной сушки. Закончили сборку первого домокомплекта.</p>
+        <div class="shots s-two">
+          <img src="img/petergof-1.webp" alt="Сборка здания из лафета в Петергофе" loading="lazy">
+          <img src="img/petergof-2.webp" alt="Здание из лафета в Петергофе, вид сбоку" loading="lazy">
+        </div>
+      </div>
+    </article>
+
+    <article class="entry rv">
+      <time datetime="2026-08-03">3 августа 2026<span><span class="slot">{{где}}</span></span></time>
+      <div>
+        <h3>Домокомплект из лафета 200×200 мм</h3>
+        <p>Закончили сборку домокомплекта из профилированного лафета камерной сушки.</p>
+        <div class="shots s-two">
+          <img src="img/laf200-1.webp" alt="Сруб из лафета 200×200 на винтовых сваях" loading="lazy">
+          <img src="img/laf200-2.webp" alt="Домокомплект из лафета 200×200, вид с другой стороны" loading="lazy">
+        </div>
+      </div>
+    </article>
+
+    <article class="entry rv">
+      <time datetime="2026-04-09">9 апреля 2026<span>Новодвинск</span></time>
+      <div>
+        <h3>Дом из профилированного лафета камерной сушки</h3>
+        <p>Двухэтажный дом с террасой. Тот самый, что на первом экране.</p>
+        <div class="shots s-big">
+          <img src="img/novodvinsk-laf-2.webp" alt="Дом из лафета в Новодвинске с террасой" loading="lazy">
+          <img src="img/novodvinsk-laf-3.webp" alt="Дом из лафета в Новодвинске, угол" loading="lazy">
+          <img src="img/novodvinsk-laf-5.webp" alt="Дом из лафета в Новодвинске, фасад с крыльцом" loading="lazy">
+        </div>
+      </div>
+    </article>
+
+    <article class="entry rv">
+      <time datetime="2025-11-10">10 ноября 2025<span>Архангельск, Окружное шоссе</span></time>
+      <div>
+        <h3>Два выставочных макета</h3>
+        <p>Собрали домокомплекты из профилированного лафета и бруса у ТЦ «На Окружной». Их можно посмотреть вживую.</p>
+        <div class="shots s-tall">
+          <img src="img/maket-1.webp" alt="Выставочный макет дома у ТЦ «На Окружной»" loading="lazy">
+          <img src="img/maket-2.webp" alt="Выставочный макет, вид спереди" loading="lazy">
+          <img src="img/maket-3.webp" alt="Выставочный макет, вид сбоку" loading="lazy">
+        </div>
+      </div>
+    </article>
+
+    <article class="entry rv">
+      <time datetime="2023">2023<span>Часть сданных объектов</span></time>
+      <div>
+        <h3>Дома, сданные в 2023 году</h3>
+        <p>Из закреплённого поста сообщества.</p>
+        <div class="shots s-mix">
+          <img class="tall" src="img/obj2023-1.webp" alt="Дом с панорамным остеклением" loading="lazy">
+          <img src="img/obj2023-6.webp" alt="Одноэтажный дом из бруса зимой" loading="lazy">
+          <img src="img/obj2023-7.webp" alt="Одноэтажный дом из бруса с террасой зимой" loading="lazy">
+          <img class="tall" src="img/obj2023-2.webp" alt="Дом с панорамными окнами, вид сбоку" loading="lazy">
+          <img src="img/obj2023-4.webp" alt="Двухэтажный дом с крыльцом" loading="lazy">
+          <img src="img/obj2023-5.webp" alt="Дом под снегом" loading="lazy">
+        </div>
+      </div>
+    </article>
+
+    <div class="archive">
+      <h3>Раньше</h3>
+      <p style="color:var(--bark)">Дома и бани из альбомов сообщества.</p>
+      <div class="arch-grid">
+        <figure><img src="img/dom-117.webp" alt="Двухэтажный дом из бруса с балконом" loading="lazy"><figcaption>Дом из бруса</figcaption></figure>
+        <figure><img src="img/dom-121.webp" alt="Дом из бруса, покрашенный в красно-коричневый" loading="lazy"><figcaption>Дом из бруса, окрашен</figcaption></figure>
+        <figure><img src="img/dom-118.webp" alt="Дом из бревна с крыльцом" loading="lazy"><figcaption>Дом с террасой</figcaption></figure>
+        <figure><img src="img/dom-120.webp" alt="Двухэтажный дом с верандой" loading="lazy"><figcaption>Дом с верандой</figcaption></figure>
+        <figure><img src="img/dom-45.webp" alt="Дом из бруса с мансардой и балконом" loading="lazy"><figcaption>Дом с мансардой</figcaption></figure>
+        <figure><img src="img/dom-124.webp" alt="Одноэтажный дом с обшивкой и крыльцом" loading="lazy"><figcaption>Одноэтажный дом</figcaption></figure>
+        <figure><img src="img/banya-134.webp" alt="Баня из бруса в лесу" loading="lazy"><figcaption>Баня из бруса</figcaption></figure>
+        <figure><img src="img/banya-139.webp" alt="Баня из бруса с крышей" loading="lazy"><figcaption>Баня под крышей</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="maket on-dark" id="makety">
+  <div class="wrap maket-grid">
+    <div>
+      <h2>Приезжайте потрогать стены</h2>
+      <p class="lead" style="margin-top:20px">Выставочные макеты из лафета и бруса стоят на площадке у торгового центра. Вживую видно углы, пазы и толщину стены.</p>
+      <div class="addr">Архангельск, Окружное шоссе, 13</div>
+      <p>У ТЦ «На Окружной». Один из макетов продавался — наличие уточните по телефону.</p>
+      <div class="btn-row">
+        <a class="btn btn-pine" href="tel:+78182488855"><svg><use href="#i-phone"/></svg>Договориться о показе</a>
+        <a class="btn btn-line" href="https://yandex.ru/maps/?text=%D0%90%D1%80%D1%85%D0%B0%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%2C%20%D0%9E%D0%BA%D1%80%D1%83%D0%B6%D0%BD%D0%BE%D0%B5%20%D1%88%D0%BE%D1%81%D1%81%D0%B5%2C%2013" target="_blank" rel="noopener"><svg><use href="#i-map"/></svg>Открыть на карте</a>
+      </div>
+    </div>
+    <div class="maket-pics">
+      <img src="img/maket-sborka-2.webp" alt="Сборка выставочного домокомплекта на площадке" loading="lazy">
+      <img src="img/maket-1.webp" alt="Готовый выставочный макет" loading="lazy">
+      <img src="img/maket-sborka-1.webp" alt="Макет из бруса во время сборки" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="kak">
+  <div class="wrap">
+    <h2>Как строим</h2>
+    <div class="steps">
+      <div class="step"><svg class="plan" viewBox="0 0 160 120" aria-hidden="true"><rect width="160" height="120" fill="#F5F7F7"/><g fill="none" stroke="#15291F" stroke-width="3"><path d="M20 18h120v84H20z"/><path d="M78 18v44M20 62h58M104 62h36M104 62v40"/></g><g fill="none" stroke="#F5F7F7" stroke-width="4"><path d="M86 62h14M78 30v12M20 78v12"/></g><g fill="none" stroke="#B07A35" stroke-width="1"><path d="M20 10h120M20 7v6M140 7v6M150 18v84M147 18h6M147 102h6"/></g></svg><h3>Проект</h3><p>Подбираем или проектируем дом, баню, бытовку.</p></div>
+      <div class="step"><img src="img/fund-184.webp" alt="Фундамент под деревянный дом" loading="lazy"><h3>Фундамент</h3><p>Готовим основание под дом.</p></div>
+      <div class="step"><img src="img/process-venec.webp" alt="Нижние венцы деревянного дома" loading="lazy"><h3>Домокомплект</h3><p>Изготавливаем на своём производстве в Новодвинске.</p></div>
+      <div class="step"><img src="img/laf200-1.webp" alt="Сборка сруба на участке" loading="lazy"><h3>Доставка и сборка</h3><p>Привозим на участок и собираем — и в области, и в Петербурге.</p></div>
+      <div class="step"><img src="img/process-okno.webp" alt="Окна и отделка внутри дома" loading="lazy"><h3>Окна и отделка</h3><p>Ставим коробки окон и дверей, делаем отделку.</p></div>
+    </div>
+    <div class="terms">Сроки: <span class="slot">{{сколько строится дом и баня}}</span>. Гарантия: <span class="slot">{{…}}</span>. Договор, рассрочка, ипотека: <span class="slot">{{…}}</span></div>
+  </div>
+</section>
+
+<section class="build" id="proekty">
+  <div class="wrap split">
+    <div>
+      <h2>Проекты</h2>
+      <p class="lead" style="margin-top:18px">Готовые проекты с картинками лежат в каталоге сообщества. Площади и цены: <span class="slot">{{…}}</span></p>
+      <div class="chips">
+        <a href="https://vk.com/market-45403775" target="_blank" rel="noopener">Д-37</a>
+        <a href="https://vk.com/market-45403775" target="_blank" rel="noopener">Д-42,2</a>
+        <a href="https://vk.com/market-45403775" target="_blank" rel="noopener">47,5</a>
+        <a href="https://vk.com/market-45403775" target="_blank" rel="noopener">Д-54</a>
+        <a href="https://vk.com/market-45403775" target="_blank" rel="noopener">Д-63</a>
+        <a href="https://vk.com/market-45403775" target="_blank" rel="noopener">Д-74</a>
+        <a href="https://vk.com/market-45403775" target="_blank" rel="noopener">Д-75</a>
+        <a href="https://vk.com/market-45403775" target="_blank" rel="noopener">Д-87,6</a>
+        <a href="https://vk.com/market-45403775" target="_blank" rel="noopener">Д-88</a>
+        <a href="https://vk.com/market-45403775" target="_blank" rel="noopener">Д-89</a>
+        <a href="https://vk.com/market-45403775" target="_blank" rel="noopener">Д-96</a>
+        <a href="https://vk.com/market-45403775" target="_blank" rel="noopener">Д-99</a>
+        <a href="https://vk.com/market-45403775" target="_blank" rel="noopener">Д-101</a>
+      </div>
+      <div class="offer on-dark">
+        <h3>Домокомплект в наличии</h3>
+        <p>Из профилированного лафета сечением 148×198 мм, для самостоятельной сборки.</p>
+        <div class="sum">259 990 ₽</div>
+        <p>Цена из поста 7 февраля 2026. Наличие: <span class="slot">{{уточнить}}</span></p>
+      </div>
+    </div>
+    <div>
+      <h2>С производства</h2>
+      <p class="lead" style="margin-top:18px">База в Новодвинске, ул. Фронтовых бригад, 10, к. 2. Самовывоз, возможна доставка.</p>
+      <div class="goods">
+        <div class="good"><span>Пиломатериал из лиственницы и сосны<small>напилим нужное сечение</small></span><b><span class="slot">{{цена}}</span></b></div>
+        <div class="good"><span>Горбыль пиленый<small>напилим под размер, погрузим</small></span><b>700 ₽/куб</b></div>
+        <div class="good"><span>Щепа сосны в мешках<small>мешок 50–60 литров</small></span><b>150 ₽</b></div>
+        <div class="good"><span>Щепа лиственницы в мешках<small>мешок 50–60 литров</small></span><b>300 ₽</b></div>
+        <div class="good"><span>Автокран</span><b>1 600 ₽ <span class="slot">{{за час?}}</span></b></div>
+        <div class="good"><span>КамАЗ 10 тонн</span><b>2 000 ₽ <span class="slot">{{за час?}}</span></b></div>
+        <div class="good"><span>Манипулятор и автовышка</span><b>2 000 ₽ <span class="slot">{{за час?}}</span></b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="o-nas">
+  <div class="wrap about-grid">
+    <img src="img/banya-129.webp" alt="Баня из бруса на участке" loading="lazy">
+    <div>
+      <h2>О «Домине»</h2>
+      <p class="lead" style="margin-top:18px"><span class="slot">{{2–3 предложения от Миши: сколько лет строите, сколько человек в бригаде, чем гордитесь}}</span></p>
+      <ul class="facts">
+        <li>Своё производство в Новодвинске: пиломатериал и домокомплекты</li>
+        <li>Строим в Архангельске, Новодвинске, Приморском районе, Пинеге, в Петербурге и Ленобласти</li>
+        <li>«Домина» во ВКонтакте с 2012 года: новые объекты, проекты, фото стройки</li>
+      </ul>
+      <div class="reviews">
+        <h3>Отзывы</h3>
+        <p style="margin:8px 0 0"><span class="slot">{{2–3 отзыва заказчиков: текст и имя}}</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contacts on-dark" id="kontakty">
+  <div class="wrap">
+    <h2>Позвоните — расскажем, сколько стоит ваш дом</h2>
+    <a class="bigphone" href="tel:+78182488855"><small>Офис, +7 (8182)</small>48-88-55</a>
+    <div class="messengers">
+      <a class="btn btn-pine" href="https://vk.com/im?sel=-45403775" target="_blank" rel="noopener"><svg><use href="#i-vk"/></svg>ВКонтакте</a>
+      <a class="btn btn-line" href="#" aria-disabled="true"><svg><use href="#i-wa"/></svg>WhatsApp <span class="slot">{{номер}}</span></a>
+      <a class="btn btn-line" href="#" aria-disabled="true"><svg><use href="#i-tg"/></svg>Telegram <span class="slot">{{ник}}</span></a>
+      <a class="btn btn-line" href="#" aria-disabled="true"><svg><use href="#i-max"/></svg>MAX <span class="slot">{{номер}}</span></a>
+    </div>
+    <div class="c-grid">
+      <div>
+        <h3>Телефоны</h3>
+        <a class="tel" href="tel:+79539396961">+7 (953) 939-69-61</a><p>директор</p>
+        <a class="tel" href="tel:+79115594555">+7 (911) 559-45-55</a><p>Юлия Будилова</p>
+      </div>
+      <div>
+        <h3>Адреса</h3>
+        <p>Офис: Архангельск, Московский проспект, <span class="slot">{{дом}}</span></p>
+        <p>Макеты: Окружное шоссе, 13, у ТЦ «На Окружной»</p>
+        <p>Производство: Новодвинск, ул. Фронтовых бригад, 10, к. 2</p>
+      </div>
+      <div>
+        <h3>ВКонтакте</h3>
+        <p><a href="https://vk.com/domina_29" target="_blank" rel="noopener">vk.com/domina_29</a> — новые объекты, проекты и фото стройки.</p>
+        <p>Часы работы: <span class="slot">{{…}}</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span style="display:flex;align-items:center;gap:16px;flex-wrap:wrap"><img class="foot-logo" src="img/logo-dark.png" alt="Домина, строительная компания" width="319" height="128" loading="lazy">© Домина, Архангельск</span>
+    <span>Сайт сделала <a href="https://t.me/Ksenia_Shchetnik" target="_blank" rel="noopener">Ксения Щетникова</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement; root.classList.add('js');
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // первый экран: 7 венцов
+  var box=document.getElementById('heroPhoto'), n=7;
+  for(var i=0;i<n;i++){
+    var s=document.createElement('div'); s.className='strip';
+    s.style.top=(i*100/n)+'%';
+    var k=n-1-i; // нижний венец ложится первым
+    s.style.transitionDelay=(k*0.11)+'s';
+    var im=document.createElement('img'); im.src='img/novodvinsk-laf-1.webp'; im.alt=i===0?'Дом из профилированного лафета в Новодвинске':'';
+    im.style.top=(-i*100)+'%'; if(i) im.setAttribute('aria-hidden','true');
+    s.appendChild(im); box.appendChild(s);
+  }
+  var hero=document.querySelector('.hero');
+  setTimeout(function(){hero.classList.add('go')}, reduce?0:120);
+
+  // торцы и журнал — по прокрутке
+  var els=[].slice.call(document.querySelectorAll('#torcy,.rv')), last=0;
+  function check(){
+    var h=window.innerHeight;
+    els=els.filter(function(el){
+      var r=el.getBoundingClientRect();
+      if(r.top<h*0.88){el.classList.add('in');return false}
+      return true;
+    });
+  }
+  window.addEventListener('scroll',function(){var t=Date.now(); if(t-last>80){last=t;check()} setTimeout(check,120)},{passive:true});
+  window.addEventListener('resize',check);
+  setTimeout(check,50);
+  // кнопки-заглушки мессенджеров
+  [].forEach.call(document.querySelectorAll('[aria-disabled="true"]'),function(a){a.addEventListener('click',function(e){e.preventDefault()})});
+})();
+</script>
+</body>
+</html>
